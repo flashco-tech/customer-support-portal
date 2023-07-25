@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "ReferralDataProcessor",
+    "pageId": "Customer Referral Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Customer Referral Details_ReferralDataProcessor",
+  "deleted": false,
+  "gitSyncId": "64bf8f196d35216bd860d71a_64bfb3c56d35216bd860e7b4"
+}

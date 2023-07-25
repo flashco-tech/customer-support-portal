@@ -72,5 +72,5 @@ left join referrals_transaction_base r1
     and cast(ui.user_id as text) = cast(r1.refree_id as text)
 left join referee_transaction_base r2 
     on cast(ui.user_id as text) = cast(r2.user_id as text)
-where uic.user_invite_count>0 and cb.email_address = '{{InputFlashId.inputText}}'
+where uic.user_invite_count>0 and cb.email_address = {{InputFlashId.inputText}}
 order by 1,3

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 700,
+          "bottomRow": 890,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -63,7 +63,7 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "text": "Invite Count: {{GetCustomerReferrals.data[0].referral_invite_count}}",
+              "text": "Invite Count: {{GetCustomerReferralsByFlashId.data[0].referral_invite_count}}",
               "key": "ah3xy5p125",
               "isDeprecated": false,
               "rightColumn": 45,
@@ -152,11 +152,74 @@
               "minDynamicHeight": 4
             },
             {
+              "boxShadow": "none",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "topRow": 5,
+              "labelWidth": 5,
+              "type": "INPUT_WIDGET_V2",
+              "animateLoading": true,
+              "resetOnSubmit": true,
+              "leftColumn": 22,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "isRequired": false,
+              "dynamicHeight": "FIXED",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "isVisible": true,
+              "version": 2,
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileBottomRow": 14,
+              "widgetName": "InputCustomerId",
+              "displayName": "Input",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "bottomRow": 10,
+              "parentRowSpace": 10,
+              "autoFocus": false,
+              "hideCard": false,
+              "mobileRightColumn": 22,
+              "parentColumnSpace": 17.09375,
+              "dynamicTriggerPathList": [],
+              "labelPosition": "Top",
+              "key": "2uxcwonph0",
+              "labelTextSize": "0.875rem",
+              "isDeprecated": false,
+              "rightColumn": 42,
+              "widgetId": "u1ndnj89o8",
+              "minWidth": 450,
+              "label": "Referrer UUID",
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 7,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 2,
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "",
+              "minDynamicHeight": 4
+            },
+            {
               "resetFormOnClick": false,
               "boxShadow": "none",
               "mobileBottomRow": 28,
               "widgetName": "ButtonSearchReferral",
-              "onClick": "{{GetCustomerReferrals.run({\n  \"emailId\": InputFlashId.inputText\n}).then(() => {}).catch(() => {\n  showAlert('Unable to fetch customer referral details', 'error');\n});}}",
+              "onClick": "{{ReferralDataProcessor.getReferralDataByInput();}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
@@ -169,8 +232,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 8,
-              "bottomRow": 12,
+              "topRow": 6,
+              "bottomRow": 10,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -182,7 +245,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 23,
+              "leftColumn": 43,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -195,10 +258,10 @@
                 }
               ],
               "text": "Search",
-              "isDisabled": "{{InputFlashId.inputText.length <= 0}}",
+              "isDisabled": "{{InputFlashId.inputText.length <= 0 && InputCustomerId.inputText.length <= 0}}",
               "key": "ip2x2vwk68",
               "isDeprecated": false,
-              "rightColumn": 37,
+              "rightColumn": 57,
               "isDefaultClickDisabled": true,
               "widgetId": "ui9w2e6zc8",
               "minWidth": 120,
@@ -339,7 +402,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 70,
+              "bottomRow": 89,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -351,7 +414,8 @@
                 "referral_user_amount": 214,
                 "referee_user_amount": 213,
                 "user_id": 216,
-                "referee_created_at": 210
+                "referee_created_at": 210,
+                "referral_email_address": 260
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -739,7 +803,7 @@
               "textSize": "0.875rem",
               "widgetId": "fjdewmfi3j",
               "minWidth": 450,
-              "tableData": "{{GetCustomerReferrals.data}}",
+              "tableData": "{{ReferralDataProcessor.getReferralData()}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -758,8 +822,20 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Customer Referral Details_GetCustomerReferrals",
-              "name": "GetCustomerReferrals",
+              "id": "Customer Referral Details_GetCustomerReferralsByUUID",
+              "name": "GetCustomerReferralsByUUID",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "InputCustomerId.inputText"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Customer Referral Details_GetCustomerReferralsByFlashId",
+              "name": "GetCustomerReferralsByFlashId",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
