@@ -2882,7 +2882,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 295,
+              "originalBottomRow": 296,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -2978,7 +2978,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939391344,
-              "originalBottomRow": 337,
+              "originalBottomRow": 338,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -3311,7 +3311,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 297,
+              "originalTopRow": 298,
               "mobileLeftColumn": 2,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -3376,11 +3376,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 344,
+              "originalTopRow": 345,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 348,
+              "originalBottomRow": 349,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -3447,11 +3447,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 349,
+              "originalTopRow": 350,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 353,
+              "originalBottomRow": 355,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -3556,7 +3556,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939079751,
-              "originalBottomRow": 390,
+              "originalBottomRow": 392,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -3939,7 +3939,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 355,
+              "originalTopRow": 357,
               "mobileLeftColumn": 4,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -3996,11 +3996,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 396,
+              "originalTopRow": 398,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 400,
+              "originalBottomRow": 402,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -4056,11 +4056,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 401,
+              "originalTopRow": 403,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 405,
+              "originalBottomRow": 407,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -4154,7 +4154,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689924698120,
-              "originalBottomRow": 456,
+              "originalBottomRow": 458,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -4514,7 +4514,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 406,
+              "originalTopRow": 408,
               "mobileLeftColumn": 2,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -4571,11 +4571,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 460,
+              "originalTopRow": 462,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 464,
+              "originalBottomRow": 466,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -4631,11 +4631,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 464,
+              "originalTopRow": 466,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 468,
+              "originalBottomRow": 470,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -4729,7 +4729,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939373101,
-              "originalBottomRow": 518,
+              "originalBottomRow": 520,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -5080,7 +5080,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 468,
+              "originalTopRow": 470,
               "mobileLeftColumn": 4,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -5197,7 +5197,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "64bf8f196d35216bd860d71a_64bf90716d35216bd860d88b"
