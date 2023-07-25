@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "GetCustomerEmailDetails",
+    "name": "GetFmailEmailDetails",
     "datasource": {
       "name": "Prod Postgres Reader",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT id, customer_email_address,subject,snippet, \"from\" , current_status, email_sender, email_domain, email_type, entity_type, email_category, created_at, updated_at FROM public.\"email_information\" where customer_id = {{appsmith.URL.queryParams.customerId}} order by created_at DESC LIMIT 100;",
+      "body": "SELECT id, customer_email_address,subject,snippet, \"from\" , current_status, email_sender, email_domain, email_type, \nentity_type, email_category, created_at, updated_at FROM public.\"email_information\" \nwhere customer_id = {{appsmith.URL.queryParams.customerId}}\nand customer_email_address like '%flash.co%'\norder by created_at DESC LIMIT 1000;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -43,7 +43,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Customer Profile_GetCustomerEmailDetails",
+  "id": "Customer Profile_GetFmailEmailDetails",
   "deleted": false,
   "gitSyncId": "64bf8f196d35216bd860d71a_64bf91036d35216bd860d909"
 }

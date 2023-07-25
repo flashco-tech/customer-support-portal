@@ -1,0 +1,5 @@
+SELECT id, customer_email_address,subject,snippet, "from" , current_status, email_sender, email_domain, email_type, 
+entity_type, email_category, created_at, updated_at FROM public."email_information" 
+where customer_id = {{appsmith.URL.queryParams.customerId}}
+and customer_email_address like '%gmail%'
+order by created_at DESC LIMIT 1000;

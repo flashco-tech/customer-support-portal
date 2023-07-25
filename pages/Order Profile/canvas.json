@@ -85,7 +85,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 4,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
@@ -148,7 +148,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 31,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
@@ -211,7 +211,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 8,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
@@ -274,7 +274,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 12,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
@@ -287,8 +287,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 18,
-              "bottomRow": 22,
+              "topRow": 22,
+              "bottomRow": 26,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -337,7 +337,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 16,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
@@ -350,8 +350,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 22,
-              "bottomRow": 26,
+              "topRow": 18,
+              "bottomRow": 22,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -400,7 +400,7 @@
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 20,
-              "fontSize": "1.25rem",
+              "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
             {
