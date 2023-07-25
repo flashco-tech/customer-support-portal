@@ -1,1 +1,1 @@
-select * from entity.entities where customer_id = {{appsmith.URL.queryParams.customerId}} order by created_at desc limit 100;
+select * from entity.entities where customer_id = {{appsmith.URL.queryParams.customerId}} order by created_at desc limit 1000;
