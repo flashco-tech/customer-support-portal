@@ -1,0 +1,1 @@
+select * from entity.entity_email_mappings where entity_id = {{this.params.entity_id}} order by created_at desc limit 10;

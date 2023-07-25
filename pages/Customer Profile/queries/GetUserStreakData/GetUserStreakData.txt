@@ -1,0 +1,4 @@
+select ne.tracking_data from campaigns.node_execution_history as ne
+join campaigns.node_instances as ni
+on ni.id = ne.node_instance_id
+where ni.campaign_id = {{this.params.campaignId}} and ni.user_id = {{this.params.userId}};

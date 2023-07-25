@@ -1,0 +1,3 @@
+SELECT customer_id, email_address FROM public.customer_email where customer_id in ({{AudienceDataProcessor.userIds.join(', ')}})
+and email_provider = 'FMAIL'
+LIMIT {{ TableCampaignAudiences.pageSize }} OFFSET {{ TableCampaignAudiences.pageOffset }};

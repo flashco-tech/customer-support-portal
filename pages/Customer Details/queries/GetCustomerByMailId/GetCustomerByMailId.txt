@@ -1,0 +1,6 @@
+SELECT * FROM public.customer_email where customer_id in (
+	SELECT customer_id FROM public."email_information" 
+	where id = '{{InputEmailUUID.inputText}}'
+	order by created_at DESC LIMIT 10
+) 
+and email_provider = 'FMAIL';

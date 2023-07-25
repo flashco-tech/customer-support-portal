@@ -1,0 +1,4 @@
+select ch.data from campaigns.cashback_campaign_history as ch
+join campaigns.cashback_campaign_user_summary as cu
+on cu.id = ch.cashback_campaign_user_summary_id
+where cu.user_id = {{this.params.userId}} and cu.campaign_id = {{this.params.campaignId}};

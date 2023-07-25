@@ -1,0 +1,1 @@
+SELECT * FROM public.customer_email where customer_id = {{appsmith.URL.queryParams.customerId}} and email_provider = 'FMAIL';

@@ -1,0 +1,1 @@
+SELECT * FROM public.customer_email where email_address ='{{InputCustomerEmailAddress.inputText}}';

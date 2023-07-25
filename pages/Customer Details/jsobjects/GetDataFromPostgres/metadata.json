@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "GetDataFromPostgres",
+    "pageId": "Customer Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Customer Details_GetDataFromPostgres",
+  "deleted": false,
+  "gitSyncId": "64bf8f196d35216bd860d71a_64bf8f706d35216bd860d766"
+}

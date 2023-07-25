@@ -1,0 +1,22 @@
+SELECT query1.referred_by, query2.email_address as referred_by_email_address, query1.referred_friend_id, query3.email_address as referred_friend_email_address
+FROM (
+    WITH cte AS (
+        SELECT customer_id
+        FROM customer_email
+        WHERE email_address = {{this.params.emailId}}
+    )
+    SELECT uic.user_id as referred_by, ui.user_id as referred_friend_id 
+    FROM user_invite_codes uic 
+    JOIN user_invitation ui ON ui.user_invite_code_id = uic.id 
+    WHERE uic.type='REFERRAL' AND uic.user_id in (SELECT customer_id FROM cte)
+) as query1 
+JOIN (
+    SELECT customer_id, email_address 
+    FROM customer_email
+    WHERE email_provider = 'FMAIL'
+) as query2 ON query1.referred_by = query2.customer_id
+JOIN (
+    SELECT customer_id, email_address 
+    FROM customer_email
+    WHERE email_provider = 'FMAIL'
+) as query3 ON query1.referred_friend_id = query3.customer_id;

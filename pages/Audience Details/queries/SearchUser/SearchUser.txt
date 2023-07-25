@@ -1,0 +1,2 @@
+SELECT customer_id, email_address FROM public.customer_email 
+where customer_id LIKE {{"%" + TableCampaignAudiences.searchText + "%"}} ORDER BY created_at;

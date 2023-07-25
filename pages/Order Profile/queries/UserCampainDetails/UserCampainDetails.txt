@@ -1,0 +1,5 @@
+select c.title, c.id, C.campaign_type from 
+campaigns.user_campaigns as uc 
+join campaigns.campaigns as C
+on uc.campaign_id = C.id
+where uc.user_id = {{appsmith.URL.queryParams.customerId}};

@@ -1,0 +1,32 @@
+{
+  "unpublishedCollection": {
+    "name": "AudienceDataProcessor",
+    "pageId": "Audience Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "userIds",
+        "value": "[]"
+      },
+      {
+        "name": "currentAudienceId",
+        "value": "\"\""
+      },
+      {
+        "name": "audienceIds",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Audience Details_AudienceDataProcessor",
+  "deleted": false,
+  "gitSyncId": "64bf8f196d35216bd860d71a_64bf92946d35216bd860db49"
+}

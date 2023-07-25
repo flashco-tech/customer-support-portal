@@ -1,0 +1,3 @@
+select * from email_information 
+where id in (SELECT mail_id from entity.entity_email_mappings
+where entity_id = '{{appsmith.URL.queryParams.entityId}}');

@@ -1,0 +1,2 @@
+select audience_id from campaigns.campaign_audiences
+where campaign_id = {{InputCampaignId.inputText}};
