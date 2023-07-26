@@ -1,7 +1,9 @@
 SELECT rpl.status, rpl.user_id, rpl.amount, rpl.description, rpl.expires_at, rpl.created_at, rpl.updated_at, rpl.redeemed_amount, rpl.expired_amount, rpl.entry_type, 
 txn.meta_info->'metaInfo'->>'campaignId' as campaignId, txn.meta_info->'metaInfo'->>'id' as order_id, c.title campaignTitle
-FROM rewards.rewards_point_ledger rpl, rewards.transactions txn, campaigns.campaigns c
-WHERE txn.id = rpl.transaction_id
-AND cast(c.id as text) = txn.meta_info->'metaInfo'->>'campaignId'
-AND rpl.user_id = '{{appsmith.URL.queryParams.customerId}}'
-order by rpl.created_at desc
+FROM rewards.rewards_point_ledger rpl
+left join rewards.transactions txn 
+    on rpl.transaction_id = txn.id
+left join campaigns.campaigns c
+    on cast(c.id as text) = txn.meta_info->'metaInfo'->>'campaignId'
+where rpl.user_id = '{{appsmith.URL.queryParams.customerId}}'
+ORDER by rpl.created_at DESC;

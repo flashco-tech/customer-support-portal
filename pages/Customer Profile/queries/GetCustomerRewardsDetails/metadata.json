@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT rpl.status, rpl.user_id, rpl.amount, rpl.description, rpl.expires_at, rpl.created_at, rpl.updated_at, rpl.redeemed_amount, rpl.expired_amount, rpl.entry_type, \ntxn.meta_info->'metaInfo'->>'campaignId' as campaignId, txn.meta_info->'metaInfo'->>'id' as order_id, c.title campaignTitle\nFROM rewards.rewards_point_ledger rpl, rewards.transactions txn, campaigns.campaigns c\nWHERE txn.id = rpl.transaction_id\nAND cast(c.id as text) = txn.meta_info->'metaInfo'->>'campaignId'\nAND rpl.user_id = '{{appsmith.URL.queryParams.customerId}}'\norder by rpl.created_at desc\n",
+      "body": "SELECT rpl.status, rpl.user_id, rpl.amount, rpl.description, rpl.expires_at, rpl.created_at, rpl.updated_at, rpl.redeemed_amount, rpl.expired_amount, rpl.entry_type, \ntxn.meta_info->'metaInfo'->>'campaignId' as campaignId, txn.meta_info->'metaInfo'->>'id' as order_id, c.title campaignTitle\nFROM rewards.rewards_point_ledger rpl\nleft join rewards.transactions txn \n    on rpl.transaction_id = txn.id\nleft join campaigns.campaigns c\n    on cast(c.id as text) = txn.meta_info->'metaInfo'->>'campaignId'\nwhere rpl.user_id = '{{appsmith.URL.queryParams.customerId}}'\nORDER by rpl.created_at DESC;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

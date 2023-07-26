@@ -3067,6 +3067,7 @@
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
+              "serverSidePaginationEnabled": false,
               "renderMode": "CANVAS",
               "mobileTopRow": 7,
               "horizontalAlignment": "LEFT",
@@ -3553,7 +3554,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 330,
+              "originalBottomRow": 329,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -3649,7 +3650,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939391344,
-              "originalBottomRow": 370,
+              "originalBottomRow": 369,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -3982,7 +3983,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 330,
+              "originalTopRow": 329,
               "mobileLeftColumn": 2,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -4047,11 +4048,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 370,
+              "originalTopRow": 369,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 374,
+              "originalBottomRow": 373,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -4118,11 +4119,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 374,
+              "originalTopRow": 373,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 379,
+              "originalBottomRow": 377,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -4227,7 +4228,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939079751,
-              "originalBottomRow": 414,
+              "originalBottomRow": 412,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -4610,7 +4611,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 379,
+              "originalTopRow": 377,
               "mobileLeftColumn": 4,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -4667,11 +4668,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 414,
+              "originalTopRow": 412,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 418,
+              "originalBottomRow": 416,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -4727,11 +4728,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 418,
+              "originalTopRow": 416,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 422,
+              "originalBottomRow": 420,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -4825,7 +4826,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689924698120,
-              "originalBottomRow": 472,
+              "originalBottomRow": 470,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -5185,7 +5186,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 422,
+              "originalTopRow": 420,
               "mobileLeftColumn": 2,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
@@ -5242,11 +5243,11 @@
               "isLoading": false,
               "mobileTopRow": 24,
               "responsiveBehavior": "fill",
-              "originalTopRow": 472,
+              "originalTopRow": 470,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 1,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 476,
+              "originalBottomRow": 474,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -5302,11 +5303,11 @@
               "isLoading": false,
               "mobileTopRow": 28,
               "responsiveBehavior": "fill",
-              "originalTopRow": 476,
+              "originalTopRow": 474,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileLeftColumn": 0,
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 480,
+              "originalBottomRow": 478,
               "fontSize": "0.875rem",
               "minDynamicHeight": 4
             },
@@ -5400,7 +5401,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1689939373101,
-              "originalBottomRow": 530,
+              "originalBottomRow": 528,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -5751,7 +5752,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 480,
+              "originalTopRow": 478,
               "mobileLeftColumn": 4,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
