@@ -13,11 +13,17 @@ export default {
 		}
 		
 	},
-	getEntityById: () => {
-		var customerId = InputEntityId.inputText;
-		if (customerId.length > 0) {
-			return GetCustomerEntityList.run()
+	getEntityDetails: () => {
+		var entityId = InputEntityId.inputText;
+		var orderId = InputSenderOrderId.inputText;
+		
+		if (entityId.length > 0) {
+			return GetEntityByEntityId.run()
 		}
+		else if (orderId.length > 0) {
+			return GetEntityByOrderId.run()
+		}
+		
 	},
 	navigateToCustomerProfile: () => {
 		const selectedRow = TableCustomerDetails.selectedRow;

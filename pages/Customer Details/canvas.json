@@ -96,8 +96,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 59,
-              "bottomRow": 63,
+              "topRow": 60,
+              "bottomRow": 64,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -381,11 +381,7 @@
                 "email_provider",
                 "meta_info"
               ],
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onRowSelected"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Table",
               "bottomRow": 42,
               "columnWidthMap": {
@@ -683,6 +679,76 @@
               "widgetId": "jwun9gt5r3",
               "minWidth": 450,
               "label": "Entity Id",
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "responsiveBehavior": "fill",
+              "maxDynamicHeight": 9000,
+              "iconAlign": "left",
+              "defaultText": "",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+              "topRow": 51,
+              "labelWidth": 5,
+              "type": "INPUT_WIDGET_V2",
+              "animateLoading": true,
+              "resetOnSubmit": true,
+              "leftColumn": 23,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "placeholderText": "Order Id",
+              "isDisabled": false,
+              "isRequired": false,
+              "dynamicHeight": "FIXED",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "showStepArrows": false,
+              "isVisible": true,
+              "version": 2,
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "widgetName": "InputSenderOrderId",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onTextChanged"
+                }
+              ],
+              "displayName": "Input",
+              "searchTags": [
+                "form",
+                "text input",
+                "number",
+                "textarea"
+              ],
+              "bottomRow": 58,
+              "parentRowSpace": 10,
+              "autoFocus": false,
+              "hideCard": false,
+              "parentColumnSpace": 17.0625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTextChanged"
+                }
+              ],
+              "labelPosition": "Top",
+              "key": "x8swp82nwz",
+              "labelTextSize": "0.875rem",
+              "onTextChanged": "{{GetDataFromPostgres.getEntityDetails()}}",
+              "isDeprecated": false,
+              "rightColumn": 43,
+              "widgetId": "w6lv9rztpx",
+              "minWidth": 450,
+              "label": "Order Id",
               "parentId": "0",
               "labelAlignment": "left",
               "renderMode": "CANVAS",
@@ -1370,7 +1436,7 @@
               "textSize": "0.875rem",
               "widgetId": "z036jpzaoj",
               "minWidth": 450,
-              "tableData": "{{GetCustomerEntityList.data}}",
+              "tableData": "{{GetDataFromPostgres.getEntityDetails.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -1384,20 +1450,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Customer Details_GetCustomerEntityList",
-              "name": "GetCustomerEntityList",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "InputEntityId.inputText"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Customer Details",
