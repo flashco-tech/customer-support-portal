@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 5300,
+          "bottomRow": 5360,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -2612,6 +2612,9 @@
                 },
                 {
                   "key": "primaryColumns.campaigntitle.computedValue"
+                },
+                {
+                  "key": "primaryColumns.campaign_type.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -2649,7 +2652,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690358819835,
+              "columnUpdatedAt": 1690781345482,
               "originalBottomRow": 206,
               "defaultSelectedRowIndices": [
                 0
@@ -2663,6 +2666,7 @@
                 "order_id",
                 "campaigntitle",
                 "description",
+                "campaign_type",
                 "expires_at",
                 "created_at",
                 "updated_at",
@@ -2682,7 +2686,10 @@
                 "description": 192,
                 "expires_at": 150,
                 "redeemed_amount": 217,
-                "amount": 131
+                "amount": 131,
+                "customColumn1": 230,
+                "campaignid": 349,
+                "user_id": 336
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -2819,7 +2826,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "expires_at",
+                  "label": "Expires At ",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserLedger.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"expires_at\"]))}}",
@@ -3053,6 +3060,36 @@
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "campaign_type": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 13,
+                  "width": 150,
+                  "originalId": "campaign_type",
+                  "id": "campaign_type",
+                  "alias": "campaign_type",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Campaign Type",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableUserLedger.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaign_type\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "onRowSelected": "",
@@ -3232,6 +3269,12 @@
                 },
                 {
                   "key": "primaryColumns.campaign_type.computedValue"
+                },
+                {
+                  "key": "primaryColumns.valid_from.computedValue"
+                },
+                {
+                  "key": "primaryColumns.valid_to.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -3269,7 +3312,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1687334239573,
+              "columnUpdatedAt": 1690781602906,
               "originalBottomRow": 321,
               "defaultSelectedRowIndices": [
                 0
@@ -3280,7 +3323,9 @@
               "columnOrder": [
                 "id",
                 "title",
-                "campaign_type"
+                "campaign_type",
+                "valid_from",
+                "valid_to"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
@@ -3394,6 +3439,66 @@
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "valid_from": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "valid_from",
+                  "id": "valid_from",
+                  "alias": "valid_from",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Valid Fom",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableCampaignDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valid_from\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                },
+                "valid_to": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "valid_to",
+                  "id": "valid_to",
+                  "alias": "valid_to",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Valid To",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableCampaignDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valid_to\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "onRowSelected": "{{copyToClipboard(TableCampaignDetails.selectedRow.id);\nGetUserStreakData.run({\n  \"userId\": appsmith.URL.queryParams.customerId, \n\t\t\"campaignId\": TableCampaignDetails.selectedRow.id\n});\nGetUserCashbackCampaignDetails.run({\n  \"userId\": appsmith.URL.queryParams.customerId, \n\t\t\"campaignId\": TableCampaignDetails.selectedRow.id\n});\n}}",
@@ -3503,7 +3608,7 @@
                 "label"
               ],
               "topRow": 325,
-              "bottomRow": 330,
+              "bottomRow": 329,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -3563,10 +3668,10 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 330,
+              "topRow": 329,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
-              "topRowBeforeCollapse": 298,
+              "topRowBeforeCollapse": 328,
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
               "dynamicBindingPathList": [
@@ -3618,7 +3723,7 @@
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "bottomRowBeforeCollapse": 338,
+              "bottomRowBeforeCollapse": 368,
               "isVisibleFilters": true,
               "isVisible": "{{JSObject1.getUserStreakData().length > 0}}",
               "enableClientSideSearch": true,
@@ -3674,7 +3779,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 370,
+              "bottomRow": 369,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4003,8 +4108,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 370,
-              "bottomRow": 374,
+              "topRow": 369,
+              "bottomRow": 373,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4071,8 +4176,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 374,
-              "bottomRow": 379,
+              "topRow": 373,
+              "bottomRow": 377,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4132,10 +4237,10 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 379,
+              "topRow": 377,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
-              "topRowBeforeCollapse": 357,
+              "topRowBeforeCollapse": 376,
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
               "dynamicBindingPathList": [
@@ -4196,7 +4301,7 @@
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "bottomRowBeforeCollapse": 392,
+              "bottomRowBeforeCollapse": 411,
               "isVisibleFilters": true,
               "isVisible": "{{JSObject1.getUserCashbackData().length > 0}}",
               "enableClientSideSearch": true,
@@ -4255,7 +4360,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 414,
+              "bottomRow": 412,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4626,8 +4731,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 414,
-              "bottomRow": 418,
+              "topRow": 412,
+              "bottomRow": 416,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4686,8 +4791,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 418,
-              "bottomRow": 422,
+              "topRow": 416,
+              "bottomRow": 420,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4741,7 +4846,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 422,
+              "topRow": 420,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4843,7 +4948,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 472,
+              "bottomRow": 470,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -5173,8 +5278,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 472,
-              "bottomRow": 476,
+              "topRow": 470,
+              "bottomRow": 474,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5233,8 +5338,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 476,
-              "bottomRow": 480,
+              "topRow": 474,
+              "bottomRow": 478,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5288,7 +5393,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 480,
+              "topRow": 478,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -5394,7 +5499,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 530,
+              "bottomRow": 528,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
