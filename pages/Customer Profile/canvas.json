@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 5360,
+          "bottomRow": 5300,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -3275,6 +3275,9 @@
                 },
                 {
                   "key": "primaryColumns.valid_to.computedValue"
+                },
+                {
+                  "key": "primaryColumns.status.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -3312,7 +3315,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690781602906,
+              "columnUpdatedAt": 1690782860940,
               "originalBottomRow": 321,
               "defaultSelectedRowIndices": [
                 0
@@ -3325,7 +3328,8 @@
                 "title",
                 "campaign_type",
                 "valid_from",
-                "valid_to"
+                "valid_to",
+                "status"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
@@ -3340,7 +3344,9 @@
                 "user_id": 163,
                 "campaign_id": 336,
                 "id": 379,
-                "title": 199
+                "title": 199,
+                "valid_from": 225,
+                "valid_to": 236
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -3450,7 +3456,7 @@
                   "alias": "valid_from",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "date",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -3468,7 +3474,9 @@
                   "computedValue": "{{TableCampaignDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valid_from\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
                 },
                 "valid_to": {
                   "allowCellWrapping": false,
@@ -3480,7 +3488,7 @@
                   "alias": "valid_to",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "date",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -3496,6 +3504,38 @@
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableCampaignDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"valid_to\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": "",
+                  "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
+                },
+                "status": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 5,
+                  "width": 150,
+                  "originalId": "status",
+                  "id": "status",
+                  "alias": "status",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "status",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableCampaignDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
@@ -3608,7 +3648,7 @@
                 "label"
               ],
               "topRow": 325,
-              "bottomRow": 329,
+              "bottomRow": 330,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -3668,7 +3708,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 329,
+              "topRow": 330,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "topRowBeforeCollapse": 328,
@@ -3779,7 +3819,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 369,
+              "bottomRow": 370,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4108,8 +4148,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 369,
-              "bottomRow": 373,
+              "topRow": 370,
+              "bottomRow": 374,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4176,8 +4216,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 373,
-              "bottomRow": 377,
+              "topRow": 374,
+              "bottomRow": 379,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4237,7 +4277,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 377,
+              "topRow": 379,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "topRowBeforeCollapse": 376,
@@ -4360,7 +4400,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 412,
+              "bottomRow": 414,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4731,8 +4771,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 412,
-              "bottomRow": 416,
+              "topRow": 414,
+              "bottomRow": 418,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4791,8 +4831,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 416,
-              "bottomRow": 420,
+              "topRow": 418,
+              "bottomRow": 422,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4846,7 +4886,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 420,
+              "topRow": 422,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4948,7 +4988,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 470,
+              "bottomRow": 472,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -5278,8 +5318,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 470,
-              "bottomRow": 474,
+              "topRow": 472,
+              "bottomRow": 476,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5338,8 +5378,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 474,
-              "bottomRow": 478,
+              "topRow": 476,
+              "bottomRow": 480,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5393,7 +5433,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 478,
+              "topRow": 480,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -5499,7 +5539,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 528,
+              "bottomRow": 530,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,

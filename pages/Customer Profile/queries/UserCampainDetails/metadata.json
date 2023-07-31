@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select c.title, c.id, C.campaign_type, C.valid_from, C.valid_to from \ncampaigns.user_campaigns as uc \njoin campaigns.campaigns as C\non uc.campaign_id = C.id\nwhere uc.user_id = {{appsmith.URL.queryParams.customerId}};",
+      "body": "select c.title, c.id, C.campaign_type, C.valid_from, C.valid_to, C.status from \ncampaigns.user_campaigns as uc \njoin campaigns.campaigns as C\non uc.campaign_id = C.id\nwhere uc.user_id = {{appsmith.URL.queryParams.customerId}}\nORDER BY C.valid_from DESC;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

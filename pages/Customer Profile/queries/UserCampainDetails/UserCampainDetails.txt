@@ -1,5 +1,6 @@
-select c.title, c.id, C.campaign_type, C.valid_from, C.valid_to from 
+select c.title, c.id, C.campaign_type, C.valid_from, C.valid_to, C.status from 
 campaigns.user_campaigns as uc 
 join campaigns.campaigns as C
 on uc.campaign_id = C.id
-where uc.user_id = {{appsmith.URL.queryParams.customerId}};
+where uc.user_id = {{appsmith.URL.queryParams.customerId}}
+ORDER BY C.valid_from DESC;
