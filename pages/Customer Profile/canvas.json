@@ -4967,7 +4967,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690448081285,
+              "columnUpdatedAt": 1690783662250,
               "originalBottomRow": 470,
               "defaultSelectedRowIndices": [
                 0
@@ -4978,21 +4978,25 @@
               "columnOrder": [
                 "campaignId",
                 "campaignTitle",
+                "status",
                 "validFrom",
                 "validTill",
                 "description1",
                 "description2",
                 "tncs",
-                "howToParticipate",
-                "status"
+                "howToParticipate"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
               "displayName": "Table",
               "bottomRow": 472,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
-                "status": 150,
+                "status": 214,
                 "referred_by": 382,
                 "updated_at": 146,
                 "created_at": 162,
@@ -5004,7 +5008,9 @@
                 "date": 174,
                 "merchant": 125,
                 "campaignId": 356,
-                "userId": 341
+                "userId": 341,
+                "validFrom": 198,
+                "validTill": 169
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -5066,7 +5072,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "campaignTitle",
+                  "label": "Campaign Title",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaignTitle\"]))}}",
@@ -5084,7 +5090,7 @@
                   "alias": "validFrom",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
+                  "columnType": "date",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -5096,13 +5102,15 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "validFrom",
+                  "label": "Valid From",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"validFrom\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "inputFormat": "Epoch",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
                 },
                 "validTill": {
                   "allowCellWrapping": false,
@@ -5114,7 +5122,7 @@
                   "alias": "validTill",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
+                  "columnType": "date",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -5126,13 +5134,15 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "validTill",
+                  "label": "Valid Till",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"validTill\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": ""
+                  "cellBackground": "",
+                  "inputFormat": "Epoch",
+                  "outputFormat": "YYYY-MM-DD HH:mm"
                 },
                 "description1": {
                   "allowCellWrapping": false,
@@ -5156,7 +5166,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "description1",
+                  "label": "Description1",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description1\"]))}}",
@@ -5186,7 +5196,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "description2",
+                  "label": "Ddescription2",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description2\"]))}}",
@@ -5276,7 +5286,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "status",
+                  "label": "Campaign Status",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
@@ -5285,7 +5295,7 @@
                   "cellBackground": ""
                 }
               },
-              "onRowSelected": "{{copyToClipboard(TableUserCampaignDetails.selectedRow.selectedRow.id);}}",
+              "onRowSelected": "{{copyToClipboard(TableUserEligiblCampaignDetail.selectedRow.campaignId);}}",
               "key": "787xw6uahc",
               "canFreezeColumn": true,
               "isDeprecated": false,
@@ -5517,7 +5527,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1689939373101,
+              "columnUpdatedAt": 1690783670972,
               "originalBottomRow": 528,
               "defaultSelectedRowIndices": [
                 0
@@ -5527,8 +5537,8 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "campaignId",
-                "status",
                 "campaignTitle",
+                "status",
                 "validFrom",
                 "validTill",
                 "description1",
@@ -5630,7 +5640,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "campaignTitle",
+                  "label": "Campaign Title",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaignTitle\"]))}}",
@@ -5660,7 +5670,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "validFrom",
+                  "label": "Valid From",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"validFrom\"]))}}",
@@ -5692,7 +5702,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "validTill",
+                  "label": "Valid Till",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"validTill\"]))}}",
@@ -5724,7 +5734,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "description1",
+                  "label": "Description1",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description1\"]))}}",
@@ -5754,7 +5764,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "description2",
+                  "label": "Description2",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description2\"]))}}",
@@ -5784,7 +5794,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "description3",
+                  "label": "Description3",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description3\"]))}}",
