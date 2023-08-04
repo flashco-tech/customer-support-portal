@@ -38,6 +38,7 @@ referee_transaction_base as (
     left join rewards.rewards_point_ledger rpl 
         on t.id = rpl.transaction_id
     where meta_info->'type'='"REFERRAL"'
+	  and meta_info->'metaInfo'->>'type'<>'REFERRAL'
 )
 select 
     uic.user_id, 

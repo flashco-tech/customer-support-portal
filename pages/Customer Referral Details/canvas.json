@@ -156,11 +156,14 @@
               "boxShadow": "none",
               "mobileBottomRow": 28,
               "widgetName": "ButtonSearchReferral",
-              "onClick": "{{ReferralDataProcessor.getReferralDataByInput();}}",
+              "onClick": "{{ReferralDataProcessor.getReferralDataByInput()}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
                   "key": "isDisabled"
+                },
+                {
+                  "key": "onClick"
                 }
               ],
               "displayName": "Button",
