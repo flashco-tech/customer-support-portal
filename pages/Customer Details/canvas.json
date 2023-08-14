@@ -381,7 +381,11 @@
                 "email_provider",
                 "meta_info"
               ],
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
               "displayName": "Table",
               "bottomRow": 42,
               "columnWidthMap": {
