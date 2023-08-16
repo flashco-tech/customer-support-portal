@@ -156,7 +156,7 @@
               "boxShadow": "none",
               "mobileBottomRow": 28,
               "widgetName": "ButtonSearchReferral",
-              "onClick": "{{ReferralDataProcessor.getReferralData()()}}",
+              "onClick": "{{ReferralDataProcessor.getReferralDataByInput()}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "dynamicPropertyPathList": [
                 {
@@ -769,7 +769,7 @@
               "jsonPathKeys": [
                 "InputFlashId.inputText"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 15000
             },
             {
               "id": "Customer Referral Details_GetCustomerReferralsByUUID",
@@ -779,7 +779,7 @@
               "jsonPathKeys": [
                 "InputCustomerId.inputText"
               ],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 15000
             }
           ]
         ],

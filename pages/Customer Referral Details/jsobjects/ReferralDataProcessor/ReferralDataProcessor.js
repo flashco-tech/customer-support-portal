@@ -1,14 +1,35 @@
 export default {
 	myVar1: [],
+	getReferralDataByInput () {
+		var uuid = InputCustomerId.inputText;
+		var flashId = InputFlashId.inputText;
+		
+		if(uuid.length > 0){
+			console.log("Referrer UUID", uuid.length)
+			GetCustomerReferralsByUUID.run();
+		}
+		if(flashId.length > 0){
+			console.log("Referrer FlashId", flashId.length)
+			GetCustomerReferralsByFlashId.run();
+		}
+		
+		return [];
+		
+	},
 	getReferralData () {
 		var uuid = InputCustomerId.inputText;
 		var flashId = InputFlashId.inputText;
 		
-		if(uuid.length > 0)
+		if(uuid.length > 0){
+			console.log("Referrer UUID", uuid.length)
 			return GetCustomerReferralsByUUID.data;
-		else if(flashId.length)
+		}
+		if(flashId.length > 0){
+			console.log("Referrer FlashId", flashId.length)
 			return GetCustomerReferralsByFlashId.data;
-		else return [];
+		}
+		
+		return [];
 		
 	},
 	async myFun2 () {
