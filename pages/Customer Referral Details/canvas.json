@@ -759,30 +759,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Customer Referral Details_GetCustomerReferralsByFlashId",
-              "name": "GetCustomerReferralsByFlashId",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "InputFlashId.inputText"
-              ],
-              "timeoutInMillisecond": 15000
-            },
-            {
-              "id": "Customer Referral Details_GetCustomerReferralsByUUID",
-              "name": "GetCustomerReferralsByUUID",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "InputCustomerId.inputText"
-              ],
-              "timeoutInMillisecond": 15000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Customer Referral Details",
