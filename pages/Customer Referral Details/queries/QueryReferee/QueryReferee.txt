@@ -1,0 +1,27 @@
+with referee_transaction_base as (
+    select 
+        t.user_id, 
+        rpl.amount as referee_user_amount, 
+        rpl.description as referee_user_description, 
+        rpl.created_at as referee_rewared_received_on,
+        meta_info->'type' as transaction_type
+    from rewards.transactions t 
+    left join rewards.rewards_point_ledger rpl 
+        on t.id = rpl.transaction_id
+    where meta_info->'type'='"REFERRAL"' and meta_info->'metaInfo'->>'type'<>'REFERRAL'
+)
+select 
+    uic.user_id as referrer_user_id, 
+    ui.user_id as referee_user_id, 
+    ce.email_address as referee_email_address,
+    r2.referee_user_amount,
+    r2.referee_rewared_received_on
+from user_invite_codes uic 
+left join public.user_invitation ui 
+    on cast(uic.id as text) = cast(ui.user_invite_code_id as text)
+left join public.customer_email ce
+    on ui.user_id = ce.customer_id
+    and ce.email_provider='FMAIL'
+left join referee_transaction_base r2 
+    on cast(ui.user_id as text) = cast(r2.user_id as text)
+where uic.user_invite_count>0 and uic.user_id= {{InputFlashUserUUID.inputText}} and uic.type = 'REFERRAL'

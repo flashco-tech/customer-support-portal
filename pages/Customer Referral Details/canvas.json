@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 850,
+          "bottomRow": 910,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -28,7 +28,7 @@
             {
               "boxShadow": "none",
               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-              "topRow": 5,
+              "topRow": 0,
               "labelWidth": 5,
               "type": "INPUT_WIDGET_V2",
               "animateLoading": true,
@@ -54,7 +54,7 @@
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "mobileBottomRow": 14,
-              "widgetName": "InputFlashId",
+              "widgetName": "InputFlashUserUUID",
               "displayName": "Input",
               "searchTags": [
                 "form",
@@ -62,7 +62,7 @@
                 "number",
                 "textarea"
               ],
-              "bottomRow": 10,
+              "bottomRow": 5,
               "parentRowSpace": 10,
               "autoFocus": false,
               "hideCard": false,
@@ -75,69 +75,6 @@
               "isDeprecated": false,
               "rightColumn": 22,
               "widgetId": "4q1jwheaa7",
-              "minWidth": 450,
-              "label": "Referrer Flash ID",
-              "parentId": "0",
-              "labelAlignment": "left",
-              "renderMode": "CANVAS",
-              "mobileTopRow": 7,
-              "responsiveBehavior": "fill",
-              "mobileLeftColumn": 2,
-              "maxDynamicHeight": 9000,
-              "iconAlign": "left",
-              "defaultText": "",
-              "minDynamicHeight": 4
-            },
-            {
-              "boxShadow": "none",
-              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-              "topRow": 5,
-              "labelWidth": 5,
-              "type": "INPUT_WIDGET_V2",
-              "animateLoading": true,
-              "resetOnSubmit": true,
-              "leftColumn": 22,
-              "dynamicBindingPathList": [
-                {
-                  "key": "accentColor"
-                },
-                {
-                  "key": "borderRadius"
-                }
-              ],
-              "labelStyle": "",
-              "inputType": "TEXT",
-              "isDisabled": false,
-              "isRequired": false,
-              "dynamicHeight": "FIXED",
-              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "showStepArrows": false,
-              "isVisible": true,
-              "version": 2,
-              "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "mobileBottomRow": 14,
-              "widgetName": "InputCustomerId",
-              "displayName": "Input",
-              "searchTags": [
-                "form",
-                "text input",
-                "number",
-                "textarea"
-              ],
-              "bottomRow": 10,
-              "parentRowSpace": 10,
-              "autoFocus": false,
-              "hideCard": false,
-              "mobileRightColumn": 22,
-              "parentColumnSpace": 17.09375,
-              "dynamicTriggerPathList": [],
-              "labelPosition": "Top",
-              "key": "2uxcwonph0",
-              "labelTextSize": "0.875rem",
-              "isDeprecated": false,
-              "rightColumn": 42,
-              "widgetId": "u1ndnj89o8",
               "minWidth": 450,
               "label": "Referrer UUID",
               "parentId": "0",
@@ -172,8 +109,8 @@
                 "click",
                 "submit"
               ],
-              "topRow": 7,
-              "bottomRow": 11,
+              "topRow": 2,
+              "bottomRow": 6,
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
@@ -185,7 +122,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 43,
+              "leftColumn": 22,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -198,10 +135,10 @@
                 }
               ],
               "text": "Search",
-              "isDisabled": "{{InputFlashId.inputText.length <= 0 && InputCustomerId.inputText.length <= 0}}",
+              "isDisabled": "{{InputFlashUserUUID.inputText.length <= 0 && InputCustomerId.inputText.length <= 0}}",
               "key": "ip2x2vwk68",
               "isDeprecated": false,
-              "rightColumn": 57,
+              "rightColumn": 36,
               "isDefaultClickDisabled": true,
               "widgetId": "ui9w2e6zc8",
               "minWidth": 120,
@@ -222,9 +159,9 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
-              "isVisibleDownload": false,
+              "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 17,
+              "topRow": 8,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -243,19 +180,19 @@
                   "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.user_id.computedValue"
+                  "key": "primaryColumns.referrer_user_id.computedValue"
                 },
                 {
-                  "key": "primaryColumns.referral_email_address.computedValue"
+                  "key": "primaryColumns.referrer_email_address.computedValue"
                 },
                 {
-                  "key": "primaryColumns.referral_invite_count.computedValue"
+                  "key": "primaryColumns.referrer_invite_count.computedValue"
                 },
                 {
-                  "key": "primaryColumns.referral_user_amount.computedValue"
+                  "key": "primaryColumns.referrer_user_amount.computedValue"
                 },
                 {
-                  "key": "primaryColumns.referral_rewared_received_on.computedValue"
+                  "key": "primaryColumns.referrer_rewared_received_on.computedValue"
                 },
                 {
                   "key": "primaryColumns.referee_user_id.computedValue"
@@ -264,23 +201,11 @@
                   "key": "primaryColumns.referee_created_at.computedValue"
                 },
                 {
-                  "key": "primaryColumns.refree_email_address.computedValue"
-                },
-                {
-                  "key": "primaryColumns.referee_orders.computedValue"
-                },
-                {
                   "key": "primaryColumns.referee_status.computedValue"
-                },
-                {
-                  "key": "primaryColumns.referee_user_amount.computedValue"
-                },
-                {
-                  "key": "primaryColumns.referee_rewared_received_on.computedValue"
                 }
               ],
               "needsHeightForContent": true,
-              "leftColumn": 2,
+              "leftColumn": 0,
               "delimiter": ",",
               "defaultSelectedRowIndex": 0,
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -314,27 +239,22 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690279278848,
-              "originalBottomRow": 243,
+              "columnUpdatedAt": 1695801059026,
               "defaultSelectedRowIndices": [
                 0
               ],
               "mobileBottomRow": 44,
-              "widgetName": "TableRefferalDetails",
+              "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "referral_email_address",
-                "refree_email_address",
-                "referee_created_at",
-                "referee_orders",
+                "referrer_user_id",
+                "referrer_email_address",
+                "referrer_invite_count",
+                "referrer_user_amount",
                 "referee_status",
-                "referee_user_amount",
-                "referee_rewared_received_on",
-                "referral_user_amount",
-                "referral_rewared_received_on",
-                "user_id",
-                "referee_user_id",
-                "referral_invite_count"
+                "referee_created_at",
+                "referrer_rewared_received_on",
+                "referee_user_id"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -342,25 +262,23 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 85,
+              "bottomRow": 51,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
                 "status": 85,
-                "referred_by": 382,
-                "referred_by_email_address": 239,
-                "referee_rewared_received_on": 265,
-                "referral_rewared_received_on": 271,
-                "referral_user_amount": 214,
-                "referee_user_amount": 213,
-                "user_id": 216,
-                "referee_created_at": 210,
-                "referral_email_address": 260
+                "referrer_invite_count": 133,
+                "referrer_user_amount": 148,
+                "referrer_rewared_received_on": 178,
+                "referee_user_id": 328,
+                "referrer_email_address": 193,
+                "referee_created_at": 171,
+                "referee_status": 157
               },
               "parentRowSpace": 10,
               "hideCard": false,
-              "mobileRightColumn": 36,
-              "parentColumnSpace": 17.09375,
+              "mobileRightColumn": 48,
+              "parentColumnSpace": 20.0625,
               "dynamicTriggerPathList": [
                 {
                   "key": "onRowSelected"
@@ -368,20 +286,18 @@
               ],
               "borderWidth": "1",
               "primaryColumns": {
-                "user_id": {
+                "referrer_user_id": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 0,
                   "width": 150,
-                  "originalId": "user_id",
-                  "id": "user_id",
-                  "alias": "user_id",
+                  "originalId": "referrer_user_id",
+                  "id": "referrer_user_id",
+                  "alias": "referrer_user_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": false,
@@ -390,28 +306,25 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referrer User Id",
+                  "label": "referrer_user_id",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user_id\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_user_id\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "validation": {}
                 },
-                "referral_email_address": {
+                "referrer_email_address": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 1,
                   "width": 150,
-                  "originalId": "referral_email_address",
-                  "id": "referral_email_address",
-                  "alias": "referral_email_address",
+                  "originalId": "referrer_email_address",
+                  "id": "referrer_email_address",
+                  "alias": "referrer_email_address",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -420,58 +333,52 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referrer Flash Id",
+                  "label": "referrer_email_address",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referral_email_address\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_email_address\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "validation": {}
                 },
-                "referral_invite_count": {
+                "referrer_invite_count": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 2,
                   "width": 150,
-                  "originalId": "referral_invite_count",
-                  "id": "referral_invite_count",
-                  "alias": "referral_invite_count",
+                  "originalId": "referrer_invite_count",
+                  "id": "referrer_invite_count",
+                  "alias": "referrer_invite_count",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "number",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Invite Count",
+                  "label": "Invite count",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referral_invite_count\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_invite_count\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "validation": {}
                 },
-                "referral_user_amount": {
+                "referrer_user_amount": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 3,
                   "width": 150,
-                  "originalId": "referral_user_amount",
-                  "id": "referral_user_amount",
-                  "alias": "referral_user_amount",
+                  "originalId": "referrer_user_amount",
+                  "id": "referrer_user_amount",
+                  "alias": "referrer_user_amount",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
+                  "columnType": "text",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -480,28 +387,25 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referrer Reward Amount",
+                  "label": "Amount Earned",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referral_user_amount\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_user_amount\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "validation": {}
                 },
-                "referral_rewared_received_on": {
+                "referrer_rewared_received_on": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
                   "index": 4,
                   "width": 150,
-                  "originalId": "referral_rewared_received_on",
-                  "id": "referral_rewared_received_on",
-                  "alias": "referral_rewared_received_on",
+                  "originalId": "referrer_rewared_received_on",
+                  "id": "referrer_rewared_received_on",
+                  "alias": "referrer_rewared_received_on",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "date",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -510,15 +414,13 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referrer Reward Received Date",
+                  "label": "Reward Received on",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referral_rewared_received_on\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_rewared_received_on\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": "",
-                  "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
-                  "outputFormat": "YYYY-MM-DD HH:mm"
+                  "outputFormat": "DD/MM/YYYY HH:mm"
                 },
                 "referee_user_id": {
                   "allowCellWrapping": false,
@@ -531,24 +433,21 @@
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referee User Id",
+                  "label": "referee_user_id",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_user_id\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_user_id\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "validation": {}
                 },
                 "referee_created_at": {
                   "allowCellWrapping": false,
@@ -561,9 +460,7 @@
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "date",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -572,80 +469,18 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referee Created At",
+                  "label": "referee_created_at",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_created_at\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_created_at\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "cellBackground": "",
-                  "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
-                  "outputFormat": "YYYY-MM-DD HH:mm"
-                },
-                "refree_email_address": {
-                  "allowCellWrapping": false,
-                  "allowSameOptionsInNewRow": true,
-                  "index": 7,
-                  "width": 150,
-                  "originalId": "refree_email_address",
-                  "id": "refree_email_address",
-                  "alias": "refree_email_address",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Referee Flash Id",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"refree_email_address\"]))}}",
-                  "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
-                },
-                "referee_orders": {
-                  "allowCellWrapping": false,
-                  "allowSameOptionsInNewRow": true,
-                  "index": 8,
-                  "width": 150,
-                  "originalId": "referee_orders",
-                  "id": "referee_orders",
-                  "alias": "referee_orders",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Referee Orders",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_orders\"]))}}",
-                  "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
+                  "outputFormat": "DD/MM/YYYY HH:mm"
                 },
                 "referee_status": {
                   "allowCellWrapping": false,
                   "allowSameOptionsInNewRow": true,
-                  "index": 9,
+                  "index": 7,
                   "width": 150,
                   "originalId": "referee_status",
                   "id": "referee_status",
@@ -653,9 +488,7 @@
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
-                  "textColor": "",
                   "textSize": "0.875rem",
-                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -664,86 +497,23 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Referee Status",
+                  "label": "status",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_status\"]))}}",
+                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_status\"]))}}",
                   "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
-                },
-                "referee_user_amount": {
-                  "allowCellWrapping": false,
-                  "allowSameOptionsInNewRow": true,
-                  "index": 10,
-                  "width": 150,
-                  "originalId": "referee_user_amount",
-                  "id": "referee_user_amount",
-                  "alias": "referee_user_amount",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Referee Reward Amount",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_user_amount\"]))}}",
-                  "sticky": "",
-                  "validation": {},
-                  "cellBackground": ""
-                },
-                "referee_rewared_received_on": {
-                  "allowCellWrapping": false,
-                  "allowSameOptionsInNewRow": true,
-                  "index": 11,
-                  "width": 150,
-                  "originalId": "referee_rewared_received_on",
-                  "id": "referee_rewared_received_on",
-                  "alias": "referee_rewared_received_on",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "date",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Referee Reward Received Date",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{TableRefferalDetails.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_rewared_received_on\"]))}}",
-                  "sticky": "",
-                  "validation": {},
-                  "cellBackground": "",
-                  "inputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ",
-                  "outputFormat": "YYYY-MM-DD HH:mm"
+                  "validation": {}
                 }
               },
-              "onRowSelected": "",
-              "key": "787xw6uahc",
+              "onRowSelected": "{{QueryGetRefereeOrders.run({\"referee_user_id\": Table1.selectedRow.referee_user_id })}}",
+              "key": "a7b3cazqks",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 62,
+              "rightColumn": 64,
               "textSize": "0.875rem",
-              "widgetId": "fjdewmfi3j",
+              "widgetId": "anxa7h7mwk",
               "minWidth": 450,
-              "tableData": "{{ReferralDataProcessor.getReferralData()}}",
+              "tableData": "{{QueryReferrer.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -752,14 +522,557 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 175,
-              "mobileLeftColumn": 2,
+              "mobileLeftColumn": 14,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": true,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 56,
+              "isSortable": true,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.referrer_user_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.referee_user_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.referee_user_amount.computedValue"
+                },
+                {
+                  "key": "primaryColumns.referee_rewared_received_on.computedValue"
+                },
+                {
+                  "key": "primaryColumns.referee_email_address.computedValue"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 0,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1695801242613,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "mobileBottomRow": 71,
+              "widgetName": "Table2",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "referrer_user_id",
+                "referee_user_id",
+                "referee_email_address",
+                "referee_user_amount",
+                "referee_rewared_received_on"
+              ],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "displayName": "Table",
+              "bottomRow": 91,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 70,
+                "status": 85,
+                "refree_email_address": 224,
+                "referee_user_id": 344,
+                "referee_rewared_received_on": 283,
+                "referee_email_address": 239,
+                "referee_user_amount": 189,
+                "referrer_user_id": 205
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 43,
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "referrer_user_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "referrer_user_id",
+                  "id": "referrer_user_id",
+                  "alias": "referrer_user_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "referrer_user_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referrer_user_id\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "referee_user_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "referee_user_id",
+                  "id": "referee_user_id",
+                  "alias": "referee_user_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "referee_user_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_user_id\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "referee_user_amount": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "referee_user_amount",
+                  "id": "referee_user_amount",
+                  "alias": "referee_user_amount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "referee_user_amount",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_user_amount\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "referee_rewared_received_on": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 5,
+                  "width": 150,
+                  "originalId": "referee_rewared_received_on",
+                  "id": "referee_rewared_received_on",
+                  "alias": "referee_rewared_received_on",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "referee_rewared_received_on",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_rewared_received_on\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "outputFormat": "DD/MM/YYYY HH:mm"
+                },
+                "referee_email_address": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "referee_email_address",
+                  "id": "referee_email_address",
+                  "alias": "referee_email_address",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "referee_email_address",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"referee_email_address\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                }
+              },
+              "onRowSelected": "{{QueryGetRefereeOrders.run({\"referee_user_id\": Table2.selectedRow.referee_user_id })}}",
+              "key": "a7b3cazqks",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 34,
+              "textSize": "0.875rem",
+              "widgetId": "qad154ykih",
+              "minWidth": 450,
+              "tableData": "{{QueryReferee.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 43,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 9,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "mobileBottomRow": 48,
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label"
+              ],
+              "topRow": 52,
+              "bottomRow": 56,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "mobileRightColumn": 17,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "Referee Data",
+              "key": "2px8h3l4sa",
+              "isDeprecated": false,
+              "rightColumn": 15,
+              "textAlign": "LEFT",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "5iexwt7h8w",
+              "minWidth": 450,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "mobileTopRow": 44,
+              "responsiveBehavior": "fill",
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileLeftColumn": 1,
+              "maxDynamicHeight": 9000,
+              "fontSize": "1rem",
+              "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": true,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 56,
+              "isSortable": true,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.customer_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email_address.computedValue"
+                },
+                {
+                  "key": "primaryColumns.orders.computedValue"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 34,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1695804624067,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "mobileBottomRow": 131,
+              "widgetName": "Table3",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "customer_id",
+                "email_address",
+                "orders"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "bottomRow": 91,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 70,
+                "status": 85,
+                "customer_id": 234
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 40,
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "customer_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "customer_id",
+                  "id": "customer_id",
+                  "alias": "customer_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "customer_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"customer_id\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "email_address": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 1,
+                  "width": 150,
+                  "originalId": "email_address",
+                  "id": "email_address",
+                  "alias": "email_address",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email_address",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email_address\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                },
+                "orders": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "orders",
+                  "id": "orders",
+                  "alias": "orders",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "orders",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"orders\"]))}}",
+                  "sticky": "",
+                  "validation": {}
+                }
+              },
+              "key": "a7b3cazqks",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 62,
+              "textSize": "0.875rem",
+              "widgetId": "vgy2diiixc",
+              "minWidth": 450,
+              "tableData": "{{QueryGetRefereeOrders.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 103,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "responsiveBehavior": "fill",
+              "mobileLeftColumn": 6,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Customer Referral Details_QueryGetRefereeOrders",
+              "name": "QueryGetRefereeOrders",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.referee_user_id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Customer Referral Details",

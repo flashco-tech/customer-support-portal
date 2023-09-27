@@ -1,0 +1,42 @@
+with referrer_transaction_base as (
+    select t.user_id, 
+        rpl.amount as referrer_user_amount, 
+        rpl.description as referrer_user_description, 
+        rpl.created_at as referrer_rewared_received_on,
+        meta_info->'type' as transaction_type, 
+        meta_info->'metaInfo'->>'refereeId' as referee_id, 
+        meta_info->'metaInfo'->>'refereeCampaignId' as referee_campaign_id,
+        meta_info->'metaInfo'->>'referrerCampaignId' as referrer_campaign_id
+    from rewards.transactions t 
+    left join rewards.rewards_point_ledger rpl 
+        on t.id = rpl.transaction_id
+    where meta_info->'type'='"REFERRAL"'
+)
+select 
+    uic.user_id as referrer_user_id, 
+    ce.email_address as referrer_email_address,
+    uic.user_invite_count as referrer_invite_count,
+    r1.referrer_user_amount, 
+    r1.referrer_rewared_received_on, 
+    
+    ui.user_id as referee_user_id, 
+    ui.created_at as referee_created_at, 
+    cr.status as referee_status
+    
+from user_invite_codes uic 
+left join public.user_invitation ui 
+    on cast(uic.id as text) = cast(ui.user_invite_code_id as text)
+left join public.customer_email ce
+    on uic.user_id = ce.customer_id
+    and ce.email_provider='FMAIL'
+left join (
+    select ni.user_id, ni.campaign_id, cast(ni.data->>'refereeId' as text) as referee_id, status
+    from campaigns.node_instances ni 
+    where ni.campaign_id in (select id from campaigns.campaigns c where c.campaign_type = 'REFERRAL_CAMPAIGN' and c.group_key = 'REFERRER_CAMPAIGN') 
+) cr 
+    on uic.user_id = cr.user_id
+    and cast(ui.user_id as text) = cr.referee_id
+left join referrer_transaction_base r1 
+    on uic.user_id = r1.user_id 
+    and cast(ui.user_id as text) = cast(r1.referee_id as text)
+where uic.user_invite_count>0 and uic.user_id = {{InputFlashUserUUID.inputText}} AND uic.type='REFERRAL'

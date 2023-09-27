@@ -1,0 +1,13 @@
+select 
+    ci.id as customer_id, 
+    ce.email_address, 
+    count(distinct ed.id) as orders
+from public.customer_info ci 
+left join public.customer_email ce 
+    on ci.id = ce.customer_id 
+left join entity.v_entity_details ed 
+    on ci.id = ed.customer_id 
+    and ce.email_provider = ed.email_provider
+    and date(ce.created_at) <= date(ed.order_placed_date)
+where ci.status='ACTIVE' and ce.email_provider='FMAIL' and ci.id = {{this.params.referee_user_id}}
+group by 1,2
