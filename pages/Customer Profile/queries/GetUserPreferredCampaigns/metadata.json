@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select campaign_id from \"campaigns\".user_campaign_preferences\nwhere user_id = {{appsmith.URL.queryParams.customerId}}",
+      "body": "SELECT * from \"campaigns\".campaigns where id in (select campaign_id from \"campaigns\".user_campaign_preferences\nwhere user_id = {{appsmith.URL.queryParams.customerId}})",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
