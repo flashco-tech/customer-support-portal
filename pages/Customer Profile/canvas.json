@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 5300,
+          "bottomRow": 5700,
           "containerStyle": "none",
           "snapRows": 72,
           "parentRowSpace": 1,
@@ -1812,6 +1812,9 @@
                 },
                 {
                   "key": "primaryColumns.customColumn6.computedValue"
+                },
+                {
+                  "key": "primaryColumns.sender_order_id.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -1850,7 +1853,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1689938898404,
+              "columnUpdatedAt": 1696851545394,
               "originalBottomRow": 143,
               "primaryColumnId": "mailUUID",
               "defaultSelectedRowIndices": [
@@ -1875,7 +1878,8 @@
                 "entity_type",
                 "data",
                 "id",
-                "customer_id"
+                "customer_id",
+                "sender_order_id"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
@@ -2406,6 +2410,36 @@
                   "labelColor": "#FFFFFF",
                   "inputFormat": "Milliseconds",
                   "outputFormat": "YYYY-MM-DDTHH:mm:ss.SSSZ"
+                },
+                "sender_order_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 11,
+                  "width": 150,
+                  "originalId": "sender_order_id",
+                  "id": "sender_order_id",
+                  "alias": "sender_order_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "sender_order_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableEntityList.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sender_order_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "onRowSelected": "{{showModal('ModalEntityDetails');\nGetEntityEmails.run({\n  \"entity_id\": TableEntityList.selectedRow.id\n});\ncopyToClipboard(TableEntityList.selectedRow.id);\nnavigateTo('Order Profile', {\n  orderId: TableEntityList.selectedRow.senderOrderId,\n  customerId: appsmith.URL.queryParams.customerId,\n  emailAddress: appsmith.URL.queryParams.emailAddress, \n\t\tentityId: TableEntityList.selectedRow.id\n}, 'SAME_WINDOW');}}",
@@ -3648,7 +3682,7 @@
                 "label"
               ],
               "topRow": 325,
-              "bottomRow": 330,
+              "bottomRow": 329,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -3708,7 +3742,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 330,
+              "topRow": 329,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "topRowBeforeCollapse": 328,
@@ -3819,7 +3853,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 370,
+              "bottomRow": 369,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4148,8 +4182,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 370,
-              "bottomRow": 374,
+              "topRow": 369,
+              "bottomRow": 373,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4216,8 +4250,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 374,
-              "bottomRow": 379,
+              "topRow": 373,
+              "bottomRow": 377,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4277,7 +4311,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 379,
+              "topRow": 377,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "topRowBeforeCollapse": 376,
@@ -4400,7 +4434,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 414,
+              "bottomRow": 412,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -4771,8 +4805,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 414,
-              "bottomRow": 418,
+              "topRow": 412,
+              "bottomRow": 416,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4831,8 +4865,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 418,
-              "bottomRow": 422,
+              "topRow": 416,
+              "bottomRow": 420,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -4886,7 +4920,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 422,
+              "topRow": 420,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4930,6 +4964,9 @@
                 },
                 {
                   "key": "primaryColumns.status.computedValue"
+                },
+                {
+                  "key": "primaryColumns.campaignValue.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -4967,7 +5004,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690783662250,
+              "columnUpdatedAt": 1696851544469,
               "originalBottomRow": 470,
               "defaultSelectedRowIndices": [
                 0
@@ -4984,7 +5021,8 @@
                 "description1",
                 "description2",
                 "tncs",
-                "howToParticipate"
+                "howToParticipate",
+                "campaignValue"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -4992,7 +5030,7 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 472,
+              "bottomRow": 470,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -5293,6 +5331,36 @@
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "campaignValue": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 9,
+                  "width": 150,
+                  "originalId": "campaignValue",
+                  "id": "campaignValue",
+                  "alias": "campaignValue",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "campaignValue",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableUserEligiblCampaignDetail.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaignValue\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "onRowSelected": "{{copyToClipboard(TableUserEligiblCampaignDetail.selectedRow.campaignId);}}",
@@ -5328,8 +5396,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 472,
-              "bottomRow": 476,
+              "topRow": 470,
+              "bottomRow": 474,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5388,8 +5456,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 476,
-              "bottomRow": 480,
+              "topRow": 474,
+              "bottomRow": 478,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -5441,9 +5509,9 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "borderColor": "#E0DEDE",
-              "isVisibleDownload": true,
+              "isVisibleDownload": false,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 480,
+              "topRow": 478,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -5490,6 +5558,9 @@
                 },
                 {
                   "key": "primaryColumns.howToParticipate.computedValue"
+                },
+                {
+                  "key": "primaryColumns.campaignValue.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -5527,7 +5598,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1690783670972,
+              "columnUpdatedAt": 1696851544860,
               "originalBottomRow": 528,
               "defaultSelectedRowIndices": [
                 0
@@ -5545,11 +5616,12 @@
                 "description2",
                 "description3",
                 "tncs",
-                "howToParticipate"
+                "howToParticipate",
+                "campaignValue"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 530,
+              "bottomRow": 528,
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
@@ -5861,6 +5933,36 @@
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
+                },
+                "campaignValue": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 10,
+                  "width": 150,
+                  "originalId": "campaignValue",
+                  "id": "campaignValue",
+                  "alias": "campaignValue",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "campaignValue",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableUserCashbackDetailsCopy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaignValue\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
                 }
               },
               "key": "jlr4bsfx03",
@@ -5883,10 +5985,254 @@
               "mobileLeftColumn": 4,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
+            },
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "borderColor": "#E0DEDE",
+              "isVisibleDownload": false,
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 539,
+              "isSortable": true,
+              "type": "TABLE_WIDGET_V2",
+              "inlineEditingSaveOption": "ROW_LEVEL",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.campaign_id.computedValue"
+                }
+              ],
+              "needsHeightForContent": true,
+              "leftColumn": 1,
+              "delimiter": ",",
+              "defaultSelectedRowIndex": 0,
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "isVisible": true,
+              "enableClientSideSearch": true,
+              "version": 1,
+              "totalRecordsCount": 0,
+              "isLoading": false,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "editActions": {
+                  "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                }
+              },
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1696851639272,
+              "originalBottomRow": 571,
+              "defaultSelectedRowIndices": [
+                0
+              ],
+              "mobileBottomRow": 566,
+              "widgetName": "TableUserPreferredCampaigns",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "campaign_id"
+              ],
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "bottomRow": 570,
+              "columnWidthMap": {
+                "task": 245,
+                "step": 70,
+                "status": 85
+              },
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "mobileRightColumn": 35,
+              "parentColumnSpace": 17.0625,
+              "dynamicTriggerPathList": [],
+              "borderWidth": "1",
+              "primaryColumns": {
+                "campaign_id": {
+                  "allowCellWrapping": false,
+                  "allowSameOptionsInNewRow": true,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "campaign_id",
+                  "id": "campaign_id",
+                  "alias": "campaign_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "campaign_id",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{TableUserPreferredCampaigns.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"campaign_id\"]))}}",
+                  "sticky": "",
+                  "validation": {},
+                  "cellBackground": ""
+                }
+              },
+              "key": "97b9aggjqe",
+              "canFreezeColumn": true,
+              "isDeprecated": false,
+              "rightColumn": 61,
+              "textSize": "0.875rem",
+              "widgetId": "8c9yvbh5hx",
+              "minWidth": 450,
+              "tableData": "{{GetUserPreferredCampaigns.data}}",
+              "label": "Data",
+              "searchKey": "",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "mobileTopRow": 538,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "responsiveBehavior": "fill",
+              "originalTopRow": 540,
+              "mobileLeftColumn": 1,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "mobileBottomRow": 539,
+              "widgetName": "TextPreferredCampaigns",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+              "searchTags": [
+                "typography",
+                "paragraph",
+                "label"
+              ],
+              "topRow": 535,
+              "bottomRow": 539,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "mobileRightColumn": 16,
+              "animateLoading": true,
+              "overflow": "NONE",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "parentColumnSpace": 17.0625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "truncateButtonColor"
+                },
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "text": "User Onboarding Preferred Campaigns",
+              "key": "vyjf0qcxt7",
+              "isDeprecated": false,
+              "rightColumn": 27,
+              "textAlign": "LEFT",
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "1giqocac88",
+              "minWidth": 450,
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "mobileTopRow": 535,
+              "responsiveBehavior": "fill",
+              "originalTopRow": 535,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "mobileLeftColumn": 0,
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 540,
+              "fontSize": "1rem",
+              "minDynamicHeight": 4
             }
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Customer Profile_GetEligibleCashbackCampaigns",
+              "name": "GetEligibleCashbackCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetEligibleStreakCampaigns",
+              "name": "GetEligibleStreakCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserCashbackCampaignDetails",
+              "name": "GetUserCashbackCampaignDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserStreakData",
+              "name": "GetUserStreakData",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Customer Profile_GetCustomerEntityList",
@@ -5929,56 +6275,22 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Customer Profile_GetUserPreferredCampaigns",
+              "name": "GetUserPreferredCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Customer Profile_UserCampainDetails",
               "name": "UserCampainDetails",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Customer Profile_GetEligibleCashbackCampaigns",
-              "name": "GetEligibleCashbackCampaigns",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetEligibleStreakCampaigns",
-              "name": "GetEligibleStreakCampaigns",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetUserCashbackCampaignDetails",
-              "name": "GetUserCashbackCampaignDetails",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.userId",
-                "this.params.campaignId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetUserStreakData",
-              "name": "GetUserStreakData",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.userId",
-                "this.params.campaignId"
               ],
               "timeoutInMillisecond": 10000
             }

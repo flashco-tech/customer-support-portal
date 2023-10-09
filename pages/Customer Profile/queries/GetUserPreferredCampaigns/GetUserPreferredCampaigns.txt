@@ -1,0 +1,2 @@
+select campaign_id from "campaigns".user_campaign_preferences
+where user_id = {{appsmith.URL.queryParams.customerId}}
