@@ -134,16 +134,6 @@
           ],
           [
             {
-              "id": "Customer Profile_ApiGetCampaignDetails",
-              "name": "ApiGetCampaignDetails",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "this.params.campaignId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Customer Profile_GetCustomerDetailsByEmail",
               "name": "GetCustomerDetailsByEmail",
               "confirmBeforeExecute": false,
