@@ -1,0 +1,172 @@
+{
+  "unpublishedPage": {
+    "name": "Customer Profile",
+    "slug": "customer-profile",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 5690,
+          "containerStyle": "none",
+          "snapRows": 72,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 740,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Customer Profile_GetCustomerEntityList",
+              "name": "GetCustomerEntityList",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetCustomerRewardsDetails",
+              "name": "GetCustomerRewardsDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetFmailEmailDetails",
+              "name": "GetFmailEmailDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetGmailEmailDetails",
+              "name": "GetGmailEmailDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserPreferredCampaigns",
+              "name": "GetUserPreferredCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_UserCampainDetails",
+              "name": "UserCampainDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Customer Profile_GetEligibleCashbackCampaigns",
+              "name": "GetEligibleCashbackCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetEligibleStreakCampaigns",
+              "name": "GetEligibleStreakCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserCashbackCampaignDetails",
+              "name": "GetUserCashbackCampaignDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserStreakData",
+              "name": "GetUserStreakData",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Customer Profile_ApiGetCampaignDetails",
+              "name": "ApiGetCampaignDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "this.params.campaignId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetCustomerDetailsByEmail",
+              "name": "GetCustomerDetailsByEmail",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.emailAddress"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Customer Profile",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "64bf8f196d35216bd860d71a_64bf90716d35216bd860d88b"
+}

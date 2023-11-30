@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getCustomerDetails",
-    "fullyQualifiedName": "GetDataFromPostgres.getCustomerDetails",
+    "name": "prepareFormData",
+    "fullyQualifiedName": "TOAProcesser.prepareFormData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,17 +13,16 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Customer Details",
-    "collectionId": "Customer Details_GetDataFromPostgres",
+    "pageId": "TOA Processing",
+    "collectionId": "TOA Processing_TOAProcesser",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
-      "jsArguments": [],
-      "isAsync": false
+      "jsArguments": []
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-07-25T09:01:58Z"
+    "createdAt": "2023-11-30T06:31:50Z"
   },
-  "id": "Customer Details_GetDataFromPostgres.getCustomerDetails",
+  "id": "TOA Processing_TOAProcesser.prepareFormData",
   "deleted": false,
-  "gitSyncId": "64bf8f196d35216bd860d71a_64bf8f866d35216bd860d776"
+  "gitSyncId": "64bf8f196d35216bd860d71a_65682c566878ca7f2134847c"
 }

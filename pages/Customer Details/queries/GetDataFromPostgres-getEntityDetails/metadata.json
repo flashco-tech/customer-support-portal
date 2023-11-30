@@ -23,7 +23,7 @@
       "jsArguments": [],
       "isAsync": false
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,7 +35,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-07-26T05:01:41Z"
   },
   "id": "Customer Details_GetDataFromPostgres.getEntityDetails",
   "deleted": false,
