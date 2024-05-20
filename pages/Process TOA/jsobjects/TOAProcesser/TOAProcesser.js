@@ -1,7 +1,4 @@
 export default {
-  myVar1: [],
-  myVar2: {},
-
   genRefId: () => {
     let timeNow = new Date();
     let formattedTime = timeNow.toISOString().replace(/[^\d]/g, '').slice(0, 14);
@@ -13,9 +10,13 @@ export default {
   prepareFormData: () => {
     var formData = TOAProcessing.formData;
 
+		if (formData.coins <= 0 || formData.coins > 200) {
+			showAlert("Coins should be between 1 and 200");
+		}
+
     var dataToSend = {
       "userId": formData.customerId,
-      "description": formData.description,
+      "description": "TOA for " + formData.merchant,
       "transactionRefId": this.genRefId(), // Use 'this' to refer to the current object
       "issuanceDetail": {
         "issuanceType": "REWARD_POINT",

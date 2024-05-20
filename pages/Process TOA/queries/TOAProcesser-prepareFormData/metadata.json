@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "genRefId",
-    "fullyQualifiedName": "TOAProcesser.genRefId",
+    "name": "prepareFormData",
+    "fullyQualifiedName": "TOAProcesser.prepareFormData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "TOA Processing",
-    "collectionId": "TOA Processing_TOAProcesser",
+    "pageId": "Process TOA",
+    "collectionId": "Process TOA_TOAProcesser",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -34,9 +34,10 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-11-30T06:31:50Z"
   },
-  "id": "TOA Processing_TOAProcesser.genRefId",
+  "id": "Process TOA_TOAProcesser.prepareFormData",
   "deleted": false,
-  "gitSyncId": "64bf8f196d35216bd860d71a_65682e246878ca7f213485c6"
+  "gitSyncId": "64bf8f196d35216bd860d71a_65682c566878ca7f2134847c"
 }

@@ -28,6 +28,50 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Customer Profile_GetEligibleCashbackCampaigns",
+              "name": "GetEligibleCashbackCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetEligibleStreakCampaigns",
+              "name": "GetEligibleStreakCampaigns",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.customerId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserCashbackCampaignDetails",
+              "name": "GetUserCashbackCampaignDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Customer Profile_GetUserStreakData",
+              "name": "GetUserStreakData",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.campaignId",
+                "this.params.userId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Customer Profile_GetCustomerEntityList",
               "name": "GetCustomerEntityList",
               "confirmBeforeExecute": false,
@@ -84,50 +128,6 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Customer Profile_GetEligibleCashbackCampaigns",
-              "name": "GetEligibleCashbackCampaigns",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetEligibleStreakCampaigns",
-              "name": "GetEligibleStreakCampaigns",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.customerId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetUserCashbackCampaignDetails",
-              "name": "GetUserCashbackCampaignDetails",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.campaignId",
-                "this.params.userId"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer Profile_GetUserStreakData",
-              "name": "GetUserStreakData",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "this.params.campaignId",
-                "this.params.userId"
               ],
               "timeoutInMillisecond": 10000
             }

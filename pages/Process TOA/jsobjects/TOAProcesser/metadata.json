@@ -1,24 +1,15 @@
 {
   "unpublishedCollection": {
     "name": "TOAProcesser",
-    "pageId": "TOA Processing",
+    "pageId": "Process TOA",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "variables": [
-      {
-        "name": "myVar1",
-        "value": "[]"
-      },
-      {
-        "name": "myVar2",
-        "value": "{}"
-      }
-    ],
+    "variables": [],
     "userPermissions": []
   },
-  "id": "TOA Processing_TOAProcesser",
+  "id": "Process TOA_TOAProcesser",
   "deleted": false,
   "gitSyncId": "64bf8f196d35216bd860d71a_65682c496878ca7f2134846d"
 }
